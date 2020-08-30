@@ -1,0 +1,255 @@
+:root {
+  --theme-col: 50, 180, 70; /* 138, 43, 226; */
+  --font-col: 67, 75, 117;
+}
+
+body {
+  color: rgb(var(--font-col));
+  background: linear-gradient(90deg, rgba(var(--theme-col), .2) 20%, #fff 20%);
+}
+
+.bandContent {
+    margin: 0;
+    background: #fff;
+    /* margin-right: -60px;
+    padding-right: 60px; */
+	max-width: 1500px
+}
+
+
+.topicsContainer {
+    background: rgba(var(--theme-col), .2);
+	width: 20%;
+	min-height: 100vh;
+}
+
+.topicsList {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-image: url("https://mivalek.github.io/logos/paas_logo.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+	width: 20%;
+}
+
+.topicsHeader {
+    color: rgb(var(--theme-col));
+    margin-top: 80px;
+}
+
+.topicsList .topic {
+    background-color: #fff;
+    border-right: solid 1px rgb(var(--theme-col));
+    border-left: solid 1px rgb(var(--theme-col));
+    border-bottom: none;
+    background-image: none;
+    color:
+}
+
+.topicsList .topic:nth-child(3) {
+    border-top: solid 1px rgb(var(--theme-col));
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.topicsList .topic:nth-last-child(2) {
+    border-bottom: solid 1px rgb(var(--theme-col));
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.topicsList .topic.current {
+    background: rgb(var(--theme-col));
+    color: #fff;
+}
+
+.topicsList .topic:hover, .topicsList .topic:active {
+    background: #d5d5d5;
+}
+
+.topicsList .topic.current:hover, .topicsList .topic.current:active {
+    background: rgb(var(--theme-col));
+}
+
+.topicsFooter {
+    margin-top: 40px;
+}
+
+.topicsFooter .resetButton {
+    padding: 10px;
+    font-size: .66em;
+    cursor: pointer;
+    opacity: 1;
+    border: solid 1pt rgb(var(--theme-col));
+    background: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    color: rgb(var(--theme-col));
+}
+
+.topicsFooter .resetButton:hover, .topicsFooter .resetButton:active {
+    opacity: .7;
+}
+
+.panel, pre {
+    border-color: rgb(var(--theme-col));
+}
+
+.panel-default > .panel-heading {
+    color: rgb(var(--font-col));
+}
+
+.panel.panel-default.tutorial-hint-panel {
+    background: rgba(var(--theme-col), .2);
+    border: none;
+}
+
+.btn-primary, .btn-success, .btn-info {
+    background-color: rgb(var(--theme-col), .75);
+    border: solid 1px rgba(var(--theme-col), 0);
+    border-radius: 6px;
+}
+
+.topicActions .btn.btn-primary, .topicActions .btn-default {
+    font-size: 1.3em;
+}
+
+.btn-default {
+    background-color: #fff;
+    color: rgb(var(--font-col));
+    border: solid 1px rgb(var(--font-col));
+    border-radius: 6px;
+}
+
+.btn-default:hover, .btn-default:active {
+    background-color: rgb(var(--font-col));
+    color: #fff;
+    border-color: rgb(var(--font-col));
+}
+
+.btn, .modal-content .btn + .btn {
+    padding: 8px 10px;
+}
+
+.btn-success, .btn-info, .btn-primary.btn-xs.btn-tutorial-run {
+  padding: 2px 8px 2px 5px;
+}
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+.btn-primary:focus:active, .btn-success:hover, .btn-success:focus,
+.btn-success:active, .btn-success:focus:active, .btn-info:hover,
+.btn-info:focus, .btn-info:active, .btn-info:focus:active {
+    background-color: rgb(var(--theme-col));
+    border-color: transparent;
+    color: #fff;
+}
+
+.btn-primary:focus:hover, .btn-primary:active:hover, .btn-primary:focus:active:hover,
+.btn-success:focus:hover, .btn-success:active:hover, .btn-success:focus:active:hover,
+.btn-info:focus:hover, .btn-info:active:hover, .btn-info:focus:active:hover {
+    background-color: rgb(var(--theme-col));
+}
+
+.btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+    color: rgb(var(--font-col));
+    background-color: rgba(var(--font-col), .5);
+    border-color: rgb(var(--font-col));
+}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus,
+.btn:active.focus, .btn.active.focus, .btn-primary:focus, .btn-primary:focus:active,
+.btn-success:active, .btn-success:focus:active {
+    outline: none;
+}
+
+.btn-light {
+    color: rgb(var(--theme-col));
+    background-color: #fff;
+    border-color: rgb(var(--theme-col));
+    padding: 1px 8px 1px 5px;
+}
+
+.btn-light:hover, .btn-light:focus, .btn-light.focus {
+    color: rgb(var(--theme-col));
+    text-decoration: none;
+    background: rgba(var(--theme-col), .75);
+}
+
+.btn-primary.disabled, .btn-primary:disabled, .btn-primary.disabled:hover,
+.btn-primary:disabled:hover, .btn-success.disabled, .btn-success:disabled,
+.btn-success.disabled:hover, .btn-success:disabled:hover,
+.btn-info.disabled, .btn-info:disabled, .btn-info.disabled:hover,
+.btn-info:disabled:hover {
+    background-color: transparent;
+    border: solid 1px rgb(var(--font-col));
+    color: rgb(var(--font-col));
+}
+
+code {
+    color: rgb(var(--font-col));
+    background-color: transparent;
+    font-size: large;
+    font-style: initial;
+    padding: 1px 2px
+}
+
+.accessible {
+    display: none;
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media screen and (max-width: 767px) {
+
+.band {
+    padding: 0;
+}
+
+.topicsContainer {
+  background: none;
+  display: none;
+}
+
+.topics {
+  width: 100%
+}
+
+  .topics .tutorialTitle {
+      display: block;
+      cursor: pointer;
+      background: rgba(var(--theme-col), .6);
+      padding: 30px 20px;
+      margin-top: 0;
+      color: #fff;
+      border-bottom: none;
+      background-image: url("https://mivalek.github.io/logos/paas_logo.svg");
+      background-repeat: no-repeat;
+      background-size: 8%;
+      background-position-x: right;
+  }
+
+  .section.level2.current {
+    padding: 0 20px;
+  }
+}
+
+.pagedtable-wrapper {
+    border: none;
+}
+
+a {
+    color: #2d759f;
+}
+a:hover, a:focus {
+    color: rgb(var(--them-col));
+    text-decoration: underline;
+}
