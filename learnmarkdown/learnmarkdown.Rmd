@@ -3,6 +3,8 @@ title: "markdown_test"
 output: 
   learnr::tutorial:
     css: ["css/paas_learnr.css","css/katex.min.css"]
+    includes: 
+      js: "js/setup.js"
 runtime: shiny_prerendered
 ---
 
@@ -11,40 +13,33 @@ library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-::: container
-:::
-
-
-```{js}
-// terrible hack of a solution because I be lazy
-document.body.onload = build;
-function build (){
-let container = document.getElementsByClassName("container")
-container[0].setAttribute("id","container")
-let scriptTag = document.createElement('script');
-scriptTag.src = './js/main.js';
-document.body.appendChild(scriptTag);
-}
+```{r}
+htmltools::tag("div", list(class = "container"))
 ```
 
+```{js}
+document.body.onload = build;
+function build (){
+  let scriptTag = document.createElement('script');
+  scriptTag.src = './js/main.js';
+  document.body.appendChild(scriptTag);
+}
+```
 ```{css}
 
-#markdown-title {
+.markdown-title {
   font-size: 1em;
 }
 
-#rendered-title {
+.rendered-title {
   font-size: 1em;
 }
 
 
-#markdown-content {
+.markdown-content {
   width: 75%;
   height: 10em;
-}
-
-#markdown-content {
-  padding: 1em;
+   padding: 1em;
 }
 
 .rendered-content{
