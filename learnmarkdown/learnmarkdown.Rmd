@@ -13,10 +13,13 @@ library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+some text
+
 ```{r}
 htmltools::tag("div", list(class = "container"))
 ```
 
+some more text
 
 ```{r}
 htmltools::tag("div", list(class = "container"))

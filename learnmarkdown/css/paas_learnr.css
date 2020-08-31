@@ -5,17 +5,23 @@
 
 body {
   color: rgb(var(--font-col));
-  background: linear-gradient(90deg, rgba(var(--theme-col), .2) 20%, #fff 20%);
+  background: linear-gradient(90deg, rgba(var(--theme-col), .24) 20%, #fafafa 20%);
 }
 
 .bandContent {
     margin: 0;
-    background: #fff;
+    background: #fafafa;
     /* margin-right: -60px;
     padding-right: 60px; */
 	max-width: 1500px
 }
 
+.container {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 2rem;
+}
 
 .topicsContainer {
     background: rgba(var(--theme-col), .2);
@@ -39,12 +45,14 @@ body {
 }
 
 .topicsList .topic {
-    background-color: #fff;
+    background-color: #fafafa;
     border-right: solid 1px rgb(var(--theme-col));
     border-left: solid 1px rgb(var(--theme-col));
     border-bottom: none;
     background-image: none;
-    color:
+    line-height: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .topicsList .topic:nth-child(3) {
@@ -103,6 +111,54 @@ body {
 .panel.panel-default.tutorial-hint-panel {
     background: rgba(var(--theme-col), .2);
     border: none;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+    border: solid 1px rgb(var(--theme-col));
+	font-family: monospace;
+	width: 100%;
+	padding: 1em;
+}
+
+textarea:focus {
+	border: solid 2px rgb(var(--theme-col));
+	outline: none;
+}
+
+.md-editor {
+	padding: 3.5rem 0;
+	position: relative;
+}
+
+.md-editor::before {
+	font-family: 'Source Sans', sans-serif;
+	color: rgb(var(--theme-col));
+	content: 'Your markdown';
+	position: absolute;
+	margin-top: -30px;
+	font-size: 2em;
+	font-weight: bold;
+	right: 0;
+}
+
+.rendered-content{
+	position: relative;
+	width: 100%;
+    border: solid 1px rgb(var(--font-col));
+	background: #fff;
+	padding: 1em;
+	overflow-wrap: break-word;
+}
+
+.rendered-content::before {
+	content: 'Rendered output';
+	position: absolute;
+	margin-top: -44px;
+	font-size: 2em;
+	font-weight: bold;
+	right: 0;
 }
 
 .btn-primary, .btn-success, .btn-info {
