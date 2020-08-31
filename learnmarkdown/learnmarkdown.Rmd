@@ -23,7 +23,7 @@ some more text
 
 ```{r}
 div <- htmltools::tag("div", list(class = "container"))
-htmltools::tagAppendChild(div,"Custom intial text")
+htmltools::tagAppendChild(div,"$x^2$")
 ```
 
 ```{js}
