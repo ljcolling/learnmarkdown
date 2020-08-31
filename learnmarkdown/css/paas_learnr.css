@@ -265,6 +265,10 @@ code {
 }
 
 @media screen and (max-width: 767px) {
+	
+body {
+	background: #fafafa
+}
 
 .band {
     padding: 0;
@@ -276,7 +280,8 @@ code {
 }
 
 .topics {
-  width: 100%
+  width: 100%;
+  padding: 0 20px;
 }
 
   .topics .tutorialTitle {
@@ -284,13 +289,13 @@ code {
       cursor: pointer;
       background: rgba(var(--theme-col), .6);
       padding: 30px 20px;
-      margin-top: 0;
       color: #fff;
       border-bottom: none;
       background-image: url("https://mivalek.github.io/logos/paas_logo.svg");
       background-repeat: no-repeat;
       background-size: 8%;
       background-position-x: right;
+	  margin: 0px -20px 20px -20px;
   }
 
   .section.level2.current {
