@@ -17,6 +17,11 @@ knitr::opts_chunk$set(echo = FALSE)
 htmltools::tag("div", list(class = "container"))
 ```
 
+
+```{r}
+htmltools::tag("div", list(class = "container"))
+```
+
 ```{js}
 document.body.onload = build;
 function build (){
@@ -24,31 +29,4 @@ function build (){
   scriptTag.src = './js/main.js';
   document.body.appendChild(scriptTag);
 }
-```
-```{css}
-
-.markdown-title {
-  font-size: 1em;
-}
-
-.rendered-title {
-  font-size: 1em;
-}
-
-
-.markdown-content {
-  width: 75%;
-  height: 10em;
-   padding: 1em;
-}
-
-.rendered-content{
-  width: 75%;
-  border-style: solid;
-  border-width: 1px;
-  padding: 1em;
-}
-
-
-
 ```
