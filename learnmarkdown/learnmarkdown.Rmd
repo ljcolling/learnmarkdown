@@ -22,7 +22,8 @@ htmltools::tag("div", list(class = "container"))
 some more text
 
 ```{r}
-htmltools::tag("div", list(class = "container"))
+div <- htmltools::tag("div", list(class = "container"))
+htmltools::tagAppendChild(div,"Custom intial text")
 ```
 
 ```{js}
